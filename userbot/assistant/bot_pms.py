@@ -103,16 +103,16 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"Hey! 👤{mention} 👀\
+            start_msg = f"Hey! 👤{mention}"👀"\
                         \nI am {my_mention}'s assistant bot of Manas.\
-                        \nYou can contact to my master from here 🤖\
-                        \n\nDeveloped by [Manas]"
+                        \nYou can contact to my Master from here 🤖\
+                        \n\nDeveloped by [Manas]🙂"
         buttons = [
             (
-                Button.url("Repo", "https://t.me/+SImB5XULV5RiZjg1"),
+                Button.url("Repo", "https://t.me/SImB5XULV5RiZjg1"),
                 Button.url(
                     "Channel ",
-                    "https://telegra.ph/file/da460b8f315181ca727c9.mp4",
+                    "https://t.me/SImB5XULV5RiZjg1",
                 ),
             )
         ]
