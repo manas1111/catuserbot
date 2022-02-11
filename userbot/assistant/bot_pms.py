@@ -48,12 +48,12 @@ async def check_bot_started_users(user, event):
     check = get_starter_details(user.id)
     if check is None:
         start_date = str(datetime.now().strftime("%B %d, %Y"))
-        notification = f"👤 {_format.mentionuser(user.first_name , user.id)} has started me.\
+        notification = f"👤 {_format.mentionuser(user.first_name , user.id)} has started me 🤖\
                 \n**ID: **`{user.id}`\
                 \n**Name: **{get_display_name(user)}"
     else:
         start_date = check.date
-        notification = f"👤 {_format.mentionuser(user.first_name , user.id)} has restarted me.\
+        notification = f"👤 {_format.mentionuser(user.first_name , user.id)} has restarted me 🤖\
                 \n**ID: **`{user.id}`\
                 \n**Name: **{get_display_name(user)}"
     try:
@@ -103,22 +103,22 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"Hey! 👤{mention},\
-                        \nI am {my_mention}'s assistant bot.\
-                        \nYou can contact to my master from here.\
-                        \n\nPowered by [Catuserbot](https://t.me/catuserbot)"
+            start_msg = f"Hey! 👤{mention} 👀\
+                        \nI am {my_mention}'s assistant bot of Manas.\
+                        \nYou can contact to my master from here 🤖\
+                        \n\nDeveloped by [Manas]"
         buttons = [
             (
-                Button.url("Repo", "https://github.com/sandy1709/catuserbot"),
+                Button.url("Repo", "https://t.me/+SImB5XULV5RiZjg1"),
                 Button.url(
-                    "Deploy",
-                    "https://dashboard.heroku.com/new?button-url=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack&template=https%3A%2F%2Fgithub.com%2FMr-confused%2Fcatpack",
+                    "Channel ",
+                    "https://telegra.ph/file/da460b8f315181ca727c9.mp4",
                 ),
             )
         ]
     else:
-        start_msg = "Hey Master!\
-            \nHow can i help you ?"
+        start_msg = "Hey Master!🤖\
+            \nHow may I help you ?"
         buttons = None
     try:
         await event.client.send_message(
