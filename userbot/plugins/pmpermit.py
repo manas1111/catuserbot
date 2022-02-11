@@ -326,7 +326,7 @@ async def do_pm_chat_action(event, chat):
     except AttributeError:
         PMMESSAGE_CACHE = {}
     if str(chat.id) not in PM_WARNS:
-        text = """__Heyy! I am busy right now I already asked you to wait know. After my work finishes. \
+        text = """__Heyy! I am busy right now I already asked you to wait know. After my work finishes.\
 We can talk but not right know. Hope you understand.__
 __My master will respond when he/she comes back online, if he/she wants to.__
 **Please do not spam unless you wish to be blocked and reported.**"""
@@ -348,7 +348,7 @@ __My master will respond when he/she comes back online, if he/she wants to.__
         LOGS.info(str(e))
     sql.del_collection("pmmessagecache")
     sql.add_collection("pmmessagecache", PMMESSAGE_CACHE, {})
-    USER_BOT_WARN_ZERO = "**If I remember correctly I mentioned in my previous message this is not the right place for you to spam. \\\x1fThough you ignored that message. So, I simply blocked you. \\\x1fNow you can't do anything unless my master comes online and unblocks you.**"
+    USER_BOT_WARN_ZERO = "**If I remember correctly I mentioned in my previous message this is not the right place for you to spam.\\\x1fThough you ignored that message. So, I simply blocked you 😌\\\x1fNow you can't do anything unless my master comes online and unblocks you.**"
 
     await event.reply(USER_BOT_WARN_ZERO)
     await event.client(functions.contacts.BlockRequest(chat.id))
